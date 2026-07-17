@@ -1,0 +1,252 @@
+:root {
+    --bg-color: #f5f7fb;
+    --text-color: #1f2937;
+    --primary-color: #2563eb;
+    --accent-color: #0f172a;
+    --card-color: #ffffff;
+    --muted-color: #64748b;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: var(--accent-color);
+    color: #ffffff;
+    padding: 1.5rem 2rem;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.08em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #cbd5e1;
+}
+
+main {
+    flex: 1;
+    width: min(960px, 90%);
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+main .section-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+main section {
+    background: var(--card-color);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+main section h2 {
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+main section h3 {
+    margin-top: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+}
+
+main section p {
+    margin-bottom: 1rem;
+    color: var(--muted-color);
+}
+
+.skill-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-list li {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+    background: rgba(37, 99, 235, 0.12);
+    border: 1px solid rgba(37, 99, 235, 0.25);
+    color: var(--accent-color);
+    font-weight: 700;
+    transition: transform 0.18s ease, background-color 0.18s ease, color 0.18s ease;
+    cursor: default;
+}
+
+.skill-list li:hover {
+    background: var(--primary-color);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.cert-list {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.cert-list li {
+    color: var(--text-color);
+}
+
+@media (min-width: 760px) {
+    main .section-grid {
+        grid-template-columns: 1.3fr 0.9fr;
+    }
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    color: var(--accent-color);
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+.hero-content p {
+    margin-bottom: 0.75rem;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.7rem 1rem;
+    background: var(--primary-color);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #e2e8f0;
+    color: var(--muted-color);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.contact-form label {
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid rgba(37, 99, 235, 0.2);
+    border-color: var(--primary-color);
+}
+
+.contact-form button {
+    width: fit-content;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background: var(--primary-color);
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #1d4ed8;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    main {
+        width: 95%;
+        padding: 1rem 0;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+}
